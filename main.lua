@@ -1,4 +1,4 @@
-local text_velocity = 200; -- <- Changing this with change the speed at which the text moves around on screen
+local text_velocity = 200; -- <- Change this to the speed you want the text to bounce around at
 
 local bg_font = draw.CreateFont("TF2 Build", 25, 23, 512)
 local font = draw.CreateFont("TF2 Build", 25, 23, 528);
@@ -24,8 +24,6 @@ local char_sizes = (function()
 	
 	return tbl
 end)();
-
-local function clamp(a,b,c) return (a<b) and b or (a>c) and c or a; end
 
 local function set_rainbow_color(deg)
 	local cached_value = cached_colors[deg];
